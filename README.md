@@ -2,7 +2,7 @@
 
 A premium, “Notebook-style” static guide for setting up **DigitalOcean + Outline VPN**, with a modern UI, bilingual navigation (ENG/MYM), and copy-to-clipboard command cards.
 
-> **Live Demo**: [Add your deployment URL here](https://example.com)
+> **Live Demo**: [https://KarKarLay15.github.io/outline-vpn-guide/](https://KarKarLay15.github.io/outline-vpn-guide/)
 
 ## Features
 
