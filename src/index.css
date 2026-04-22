@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-zinc-50 text-zinc-800 dark:bg-zinc-950 dark:text-zinc-100;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image: radial-gradient(
+        rgba(0, 0, 0, 0.06) 1px,
+        transparent 1px
+      ),
+      radial-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px, 64px 64px;
+    background-position:
+      0 0,
+      0 0;
+  }
+
+  html.dark .bg-grid {
+    background-image: radial-gradient(
+        rgba(255, 255, 255, 0.07) 1px,
+        transparent 1px
+      ),
+      radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
+}
+
+@layer utilities {
+  .protect-content {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
