@@ -4,6 +4,12 @@ A premium, “Notebook-style” static guide for setting up **DigitalOcean + Out
 
 > **Live Demo**: [https://KarKarLay15.github.io/outline-vpn-guide/](https://KarKarLay15.github.io/outline-vpn-guide/)
 
+## 📸 Preview
+
+<p align="center">
+  <img alt="Outline VPN Premium Guide — passcode login preview" src="https://github.com/user-attachments/assets/867a758d-4d10-444e-bd74-223a471c33e9" width="92%" />
+</p>
+
 ## Features
 
 - **Premium UI**: dark/light theme, glass panels, responsive layout (mobile + desktop)
