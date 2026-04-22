@@ -1,73 +1,63 @@
-# React + TypeScript + Vite
+# Outline VPN Premium Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium, “Notebook-style” static guide for setting up **DigitalOcean + Outline VPN**, with a modern UI, bilingual navigation (ENG/MYM), and copy-to-clipboard command cards.
 
-Currently, two official plugins are available:
+> **Live Demo**: [Add your deployment URL here](https://example.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Premium UI**: dark/light theme, glass panels, responsive layout (mobile + desktop)
+- **Bilingual experience**: **ENG / MYM** language toggle (guide content; login UI stays English)
+- **Passcode gate**: client-side passcode with lockout + persistence (intended for casual protection, not a replacement for real authentication)
+- **Step-by-step guide**: free credit, droplet setup, server prep/BBR, Outline install, firewall options, admin UI, dynamic keys
+- **Command cards**: bash snippets in dark code blocks with **Copy** buttons
+- **Outline Admin section**: screenshot gallery + click-to-expand preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** + **TypeScript** (Vite)
+- **Tailwind CSS**
+- **lucide-react** icons
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Setup Instructions (Local)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Node.js** (LTS recommended)
+- **npm** (comes with Node)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Install
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open the local URL Vite prints (commonly `http://localhost:5173/`).
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+## Project Structure (high level)
+
+- `src/App.tsx`: main page content + language/auth/ui logic
+- `src/index.css`: Tailwind entry + small global utilities
+- `vite.config.ts`: Vite configuration
+
+## Notes
+
+- The passcode in this demo is a **frontend-only gate**. If you need real security, add server-side auth and hosting controls.
